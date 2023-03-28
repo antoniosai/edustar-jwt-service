@@ -41,8 +41,10 @@ public class AuthServiceImpl implements AuthService {
                     propertySource.getAppAuthSecret(), propertySource.getAppTimeToLive());
 
 
-            System.out.println("jwtTokenValue => " + jwtTokenValue);
-            return getTokenModel(jwtTokenValue);
+            AuthTokenModel tokenModel = getTokenModel(jwtTokenValue);
+
+            System.out.println("tokenModel => " + tokenModel);
+            return tokenModel;
         } catch (Exception e) {
             throw new AuthException("sUnauthorized API key : " + apiKey, e);
         }

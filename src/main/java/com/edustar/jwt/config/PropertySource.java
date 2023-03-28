@@ -3,8 +3,6 @@ package com.edustar.jwt.config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
-
-
 @Configuration
 public class PropertySource {
 
